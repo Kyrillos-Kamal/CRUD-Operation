@@ -60,6 +60,7 @@ function getUpdateProduct(index) {
   productPrice.value = allProducts[index].price;
   productCategory.value = allProducts[index].category;
   productDescription.value = allProducts[index].description;
+  document.getElementById("mainBtn").innerText = "Update";
 }
 function updateDate(index) {
   getUpdateProduct(index);
@@ -67,5 +68,5 @@ function updateDate(index) {
     "allProducts",
     JSON.stringify(allProducts.splice(index))
   );
-  document.getElementById("mainBtn").innerText = "Update";
+  document.getElementById("mainBtn").innerText = "Add Product";
 }
